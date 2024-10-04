@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito Sans, sans-serif;
+    color: #234B68;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px 70px;
+}
+
+.home {
+    margin: 10px 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px  solid #234B68;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+h2 {
+    margin: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    font-weight: bold;
+    height: 240x;
+}
+
+.montant, .taux, .duree {
+    margin: 10px 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    font-size: 14px;
+    height: 22px;
+}
+
+.inputmontant {
+    border: 1px solid#234B68;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+    width: 200px;
+}
+
+.inputtaux {
+    border: 1px solid#234B68;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+    width: 200px;
+}
+
+.inputduree {
+    border: 1px solid#234B68;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+    width: 200px;
+}
+
+/* Pour les navigateurs Webkit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.error {
+    border: 1px solid orange;
+    margin-right: 40px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.montant::after, .taux::after, .duree::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    right: 0px;
+    background-color: #234B68;
+    width: 40px;
+    height: 22px;
+    border-radius: 0px 7px 7px 0px;
+    font-size: 10px;
+}
+
+.montant::after{
+    content: "€";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.taux::after{
+    content: "%";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.duree::after{
+    content: "an(s)";
+    color: white;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.message {
+    margin-top: 20px;
+    color: orange;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.calcul {
+    margin: 50px 0px 15px;
+    padding: 10px 60px;
+    background-color: #234B68;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+.calcul:hover {
+    background-color: #29517F;
+    cursor: pointer;
+}
+
+/*Debut du tableau*/
+
+.affiche {
+    margin: 30px 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px  solid #234B68;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #abacac;
+}
+
+table {
+    width: 90%;
+    margin-left: 90px;
+}
+
+thead {
+    font-size: 14px;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    font-size: 12px;
+    padding-top: 15px;
+}
+
+.PDF {
+    margin: 25px 0px 0px;
+    padding: 10px 60px;
+    background-color: #234B68;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 2px 3px #abacac;
+}
