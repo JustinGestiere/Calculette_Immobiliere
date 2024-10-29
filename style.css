@@ -151,7 +151,7 @@ input[type="number"] {
 
 .affiche {
     margin: 30px 200px;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -162,7 +162,7 @@ input[type="number"] {
 
 table {
     width: 90%;
-    margin-left: 90px;
+    margin-left: 7%;
 }
 
 thead {
@@ -180,10 +180,162 @@ td {
 
 .PDF {
     margin: 25px 0px 0px;
+    width: 240px;
     padding: 10px 60px;
     background-color: #234B68;
     color: white;
     border: none;
     border-radius: 7px;
     box-shadow: 1px 2px 3px #abacac;
+}
+
+
+@media (max-width: 320px){
+    h2 {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .home, .affiche {
+        margin: 10px 20px;
+        padding: 20px;
+    }
+    
+    .montant, .taux, .duree {
+        width: 100%;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .inputmontant, .inputtaux, .inputduree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .montant::after, .taux::after, .duree::after {
+        top: 31px;
+        height: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 321px) and (max-width: 424px){
+    h2 {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .home, .affiche {
+        margin: 10px 20px;
+        padding: 20px;
+    }
+    
+    .montant, .taux, .duree {
+        width: 100%;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .inputmontant, .inputtaux, .inputduree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .montant::after, .taux::after, .duree::after {
+        top: 31px;
+        right: 25px;
+        height: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px){
+    h2 {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .home, .affiche {
+        margin: 10px 20px;
+        padding: 20px;
+    }
+    
+    .montant, .taux, .duree {
+        width: 100%;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    
+    .inputmontant, .inputtaux, .inputduree {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .montant::after, .taux::after, .duree::after {
+        top: 31px;
+        right: 50px;
+        height: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1023px){
+    .home {
+        margin: 30px 70px;
+    }
+    .affiche {
+        margin: 30px 70px;
+    }
+    table {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    .home {
+        margin: 30px 70px;
+    }
+    .affiche {
+        margin: 30px 70px;
+    }
+}
+
+@media (min-width: 1440px)and (max-width: 2559px){
+    .home {
+        margin: 30px 250px;
+    }
+    .affiche {
+        margin: 30px 250px;
+    }
+}
+
+@media (min-width: 2560px){
+    .home {
+        margin: 30px 650px;
+    }
+    .affiche {
+        margin: 30px 650px;
+    }
 }
