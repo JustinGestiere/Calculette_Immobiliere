@@ -93,19 +93,22 @@ document.getElementById("calcul").addEventListener("click", function() {
 
 
 // Bouton Telechargement PDF
-document.getElementById("PDF").addEventListener("click", function() {
-    // Importer jsPDF
-    const { jsPDF } = window.jspdf;
+// Attendre que la bibliothèque jsPDF soit chargée
+window.onload = () => {
+    document.getElementById("PDF").addEventListener("click", function() {
+        // Importer jsPDF
+        const { jsPDF } = window.jspdf;
 
-    // Créer un nouveau document PDF
-    const pdf = new jsPDF();
+        // Créer un nouveau document PDF
+        const pdf = new jsPDF();
 
-    // Récupérer le contenu à exporter
-    const content = document.getElementById("content").textContent;
+        // Récupérer le contenu à exporter
+        const content = document.getElementById("content").textContent;
 
-    // Ajouter le texte au PDF
-    pdf.text(content, 10, 10); // (texte, x, y)
+        // Ajouter le texte au PDF
+        pdf.text(content, 10, 10); // (texte, x, y)
 
-    // Télécharger le PDF
-    pdf.save("document.pdf");
-});
+        // Télécharger le PDF
+        pdf.save("document.pdf");
+    });
+};
