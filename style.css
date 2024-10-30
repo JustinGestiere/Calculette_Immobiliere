@@ -321,7 +321,12 @@ td {
         padding-right: 15px;
     }
 }
+/* tableau de calcul */
+#affiche {
+    display: none; /* Cache le tableau par défaut */
+}
 
+/* responsive */
 @media (min-width:768px) and (max-width: 1023px){
     .home {
         margin: 30px 70px;

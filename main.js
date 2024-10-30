@@ -78,3 +78,15 @@ document.getElementById("calcul").addEventListener("click", function(event){
 
 
 // Debut calcul tableau
+
+document.getElementById("calcul").addEventListener("click", function() {
+    const tableau = document.getElementById("affiche");
+    const message = document.getElementById("message")?.textContent || "";
+
+    // Affiche le tableau si le message est vide
+    if (message === "") {
+        tableau.style.display = 'block';
+    } else {
+        tableau.style.display = 'none';
+    }
+});
