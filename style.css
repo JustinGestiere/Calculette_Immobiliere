@@ -193,7 +193,7 @@ td {
 @media (max-width: 320px){
     h2 {
         text-align: center;
-        margin: 0px;
+        margin: 20px;
     }
 
     .home, .affiche {
@@ -223,6 +223,13 @@ td {
 
     table {
         width: 100%;
+        display: inline-block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-right: 15px;
     }
 }
 
@@ -230,7 +237,7 @@ td {
 @media (min-width: 321px) and (max-width: 424px){
     h2 {
         text-align: center;
-        margin: 0px;
+        margin: 20px;
     }
 
     .home, .affiche {
@@ -261,13 +268,20 @@ td {
 
     table {
         width: 100%;
+        display: inline-block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-right: 15px;
     }
 }
 
 @media (min-width: 425px) and (max-width: 767px){
     h2 {
         text-align: center;
-        margin: 0px;
+        margin: 20px;
     }
 
     .home, .affiche {
@@ -298,6 +312,13 @@ td {
 
     table {
         width: 100%;
+        display: inline-block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding-right: 15px;
     }
 }
 
