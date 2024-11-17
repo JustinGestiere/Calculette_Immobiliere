@@ -115,7 +115,7 @@ document.getElementById("PDF").addEventListener("click", function () {
         document.querySelector(".affiche").style.margin = "20px 20px";
         document.querySelector(".form").style.width = "245.6px"; 
         document.querySelectorAll("input").forEach(cell => {
-            cell.style.lineHeight = "16px";
+            cell.style.lineHeight = "0px";
         });
         document.querySelectorAll("th, td").forEach(cell => {
             cell.style.width = "10%";   
@@ -126,7 +126,7 @@ document.getElementById("PDF").addEventListener("click", function () {
         document.querySelector(".affiche").style.margin = "20px 20px";
         document.querySelector(".form").style.width = "293px";
         document.querySelectorAll("input").forEach(cell => {
-            cell.style.lineHeight = "16px";
+            cell.style.lineHeight = "0px";
         });
         document.querySelectorAll("th, td").forEach(cell => {
             cell.style.width = "10%";
@@ -137,7 +137,7 @@ document.getElementById("PDF").addEventListener("click", function () {
         document.querySelector(".affiche").style.margin = "20px 20px";
         document.querySelector(".form").style.width = "344px"; 
         document.querySelectorAll("input").forEach(cell => {
-            cell.style.lineHeight = "16px";
+            cell.style.lineHeight = "0px";
         });
         document.querySelectorAll("th, td").forEach(cell => {
             cell.style.width = "10%";
