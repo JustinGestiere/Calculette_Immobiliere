@@ -92,6 +92,16 @@ document.getElementById("calcul").addEventListener("click", function() {
 });
 
 // Calcul du tableau
+document.getElementById("calcul").addEventListener("click", function() {
+    let montant = document.getElementById("montant").value;
+    let taux = document.getElementById("taux").value;
+    let duree = document.getElementById("duree").value;
+
+    let interet = montant;
+    let mensualite = taux/(100*12);
+    let dureeMois = duree*12;
+    
+});
 
 // Bouton Telechargement PDF
 document.getElementById("PDF").addEventListener("click", function () {
