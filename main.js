@@ -78,30 +78,58 @@ document.getElementById("calcul").addEventListener("click", function(event){
 
 
 // Debut calcul tableau
-
-// Affiche le tableau si le message est vide losqu'on clique sur le bouton calcul
-document.getElementById("calcul").addEventListener("click", function() {
+document.getElementById("calcul").addEventListener("click", function () {
+    // Affichage du tableau si le message est vide
     const tableau = document.getElementById("affiche");
     const message = document.getElementById("message")?.textContent || "";
 
     if (message === "") {
-        tableau.style.display = 'flex';
+        tableau.style.display = "flex";
     } else {
-        tableau.style.display = 'none';
+        tableau.style.display = "none";
+    }
+
+    // Efface les anciennes données du tableau
+    const tableBody = document.querySelector("#affiche tbody");
+    tableBody.innerHTML = ""; // Supprime toutes les anciennes lignes
+
+    // Calcul du tableau
+    let montant = parseFloat(document.getElementById("montant").value);
+    let taux = parseFloat(document.getElementById("taux").value);
+    let duree = parseInt(document.getElementById("duree").value, 10);
+
+    // Calcul des variables
+    let mensualite = taux / (100 * 12); // Taux mensuel
+    let dureeMois = duree * 12; // Durée en mois
+    let echeance =
+        (montant * mensualite * Math.pow(1 + mensualite, dureeMois)) /
+        (Math.pow(1 + mensualite, dureeMois) - 1);
+    let soldeInitial = montant;
+
+    // Boucle pour chaque mois
+    for (let mois = 1; mois <= dureeMois; mois++) {
+        let interet = soldeInitial * mensualite; // Intérêt pour ce mois
+        let amortissement = echeance - interet; // Amortissement pour ce mois
+        let soldeRestant = soldeInitial - amortissement; // Nouveau solde restant
+
+        // Créer une ligne dans le tableau
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${mois}</td>
+            <td>${soldeInitial.toFixed(2)}</td>
+            <td>${echeance.toFixed(2)}</td>
+            <td>${interet.toFixed(2)}</td>
+            <td>${amortissement.toFixed(2)}</td>
+            <td>${soldeRestant.toFixed(2)}</td>
+        `;
+
+        tableBody.appendChild(row); // Ajouter la ligne au tableau
+
+        // Mettre à jour le solde initial pour le prochain mois
+        soldeInitial = soldeRestant;
     }
 });
 
-// Calcul du tableau
-document.getElementById("calcul").addEventListener("click", function() {
-    let montant = document.getElementById("montant").value;
-    let taux = document.getElementById("taux").value;
-    let duree = document.getElementById("duree").value;
-
-    let interet = montant;
-    let mensualite = taux/(100*12);
-    let dureeMois = duree*12;
-    
-});
 
 // Bouton Telechargement PDF
 document.getElementById("PDF").addEventListener("click", function () {
